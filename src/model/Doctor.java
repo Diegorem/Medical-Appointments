@@ -1,4 +1,5 @@
-import javax.print.Doc;
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -6,7 +7,7 @@ public class Doctor extends User{
     // Atributos de doctor
     private String speciality;
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
     }
 
@@ -25,6 +26,11 @@ public class Doctor extends User{
 
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
         return availableAppointments;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpecility: " + speciality + "\nAvailable: " + availableAppointments.toString();
     }
 
     //Clase anidada
@@ -62,5 +68,9 @@ public class Doctor extends User{
             this.time = time;
         }
 
+        @Override
+        public String toString() {
+            return "Available Appointments: \nDate: " + date + "\nTime: " + time;
+        }
     }
 }
