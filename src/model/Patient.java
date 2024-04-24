@@ -49,6 +49,7 @@ public class Patient extends User {
         return super.toString() + "\nAge: " + birthday + " Weight: " + getWeight() + "\nHeight: " + getHeight() + " Blood: " + blood;
     }
 
+    // Implementación de método abstracto obligatorio por la clase que hereda
     @Override
     public void showDataUser() {
         System.out.println("Paciente");

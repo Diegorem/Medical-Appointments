@@ -1,5 +1,6 @@
 package model;
 
+// Clase abstracta
 public abstract class User {
     private int id;
     private String name;
@@ -62,6 +63,7 @@ public abstract class User {
                 + " Phone: " + phoneNumber;
     }
 
+    // Creación de método abstracto
     public abstract void showDataUser();
 
 }

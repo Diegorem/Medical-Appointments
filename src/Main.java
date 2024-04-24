@@ -1,6 +1,4 @@
-import model.Doctor;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.Date;
 
@@ -15,8 +13,28 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        User user = new Patient("Rebeca", "rebe@mail.com");
+        User user = new Doctor("Rebeca", "rebe@mail.com");
         user.showDataUser();
+        User user2 = new Patient("Rebeca", "rebe@mail.com");
+        user2.showDataUser();
+        // Clase anónima
+        User user3 = new User("Romeo", "rome@mail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor\n");
+                System.out.println("Hospital: Cruz Verde");
+                System.out.println("Departamento: Geriatría");;
+            }
+        };
+        user3.showDataUser();
+
+        // interfaz anónima
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
 
         /*
         for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()){

@@ -33,6 +33,7 @@ public class Doctor extends User{
         return super.toString() + "\nSpecility: " + speciality + "\nAvailable: " + availableAppointments.toString();
     }
 
+    // Implementación de método abstracto obligatorio por la clase que hereda
     @Override
     public void showDataUser() {
         System.out.println("Empleado del Hospital: Cruz Roja");

@@ -7,6 +7,7 @@ public class Nurse extends User{
         super(name, email);
     }
 
+    // Implementación de método abstracto obligatorio por la clase que hereda
     @Override
     public void showDataUser() {
         System.out.println("Empleado del Hospital: Cruz Verde");
